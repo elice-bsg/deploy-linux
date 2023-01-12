@@ -2,7 +2,7 @@ name: App install and start
 
 concurrency:
   group: production #배포 설정
-  cancel-in-progress: true # 맨 마지막 워크 플로우만 남기고 모두 취소
+  cancel-in-progress: true # 실행중인 워크 플로우 중  제일 마지막에 실행된 워크 플로우만 남기고 모두 취소
 
 on:
   push:
@@ -43,4 +43,4 @@ jobs:
           RUNNER_TRACKING_ID: ''
         run: |
           cd ~/source
-          nohup npm run start:prod </dev/null >/dev/null 2>&1 &
+          nohup npm run start </dev/null >/dev/null 2>&1 &
