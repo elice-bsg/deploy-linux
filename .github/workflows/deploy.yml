@@ -6,7 +6,7 @@ concurrency:
 
 on:
   push:
-    branches: [main] # 실행조건 # 'main' 브랜치에 push나 merge 할 경우 혹은 github에서 직접 조작하는 경우 workflow 실행
+    branches: [master] # 실행조건 # 'master' 브랜치에 push나 merge 할 경우 혹은 github에서 직접 조작하는 경우 workflow 실행
   workflow_dispatch:
 jobs:
   build:
