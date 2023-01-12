@@ -23,7 +23,6 @@ jobs:
           node-version: 16.x
 
       - name: Install dependencies # 노드 의존성 설치
-        working-directory: service
         run: npm install
 
       - name: Stop old server (ignore error) # 기존에 배포된 서버 모두 Clean Up
