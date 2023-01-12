@@ -13,13 +13,6 @@ jobs:
     runs-on: [self-hosted]
     steps:
       - uses: actions/checkout@v2 #repository를 clone 이나 fetch함
-      - uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          clean: false
-      - run: npm ci
-
       - name: Use Node.js 16.x
         uses: actions/setup-node@v3.6.0 # 배포 환경설정
         with:
